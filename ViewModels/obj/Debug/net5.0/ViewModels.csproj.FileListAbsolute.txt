@@ -1,0 +1,17 @@
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\ViewModels.deps.json
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\ViewModels.dll
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\ref\ViewModels.dll
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\ViewModels.pdb
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\Hrms.Communication.dll
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\Hrms.Repository.dll
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\Hrms.Repository.pdb
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\bin\Debug\net5.0\Hrms.Communication.pdb
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.csproj.AssemblyReference.cache
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.AssemblyInfoInputs.cache
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.AssemblyInfo.cs
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.csproj.CoreCompileInputs.cache
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.csproj.CopyComplete
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.dll
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ref\ViewModels.dll
+D:\Projects\.Net\HrmsWeb_Solution\ViewModels\obj\Debug\net5.0\ViewModels.pdb

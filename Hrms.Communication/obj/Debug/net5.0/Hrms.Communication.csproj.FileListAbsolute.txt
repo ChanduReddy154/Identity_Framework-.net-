@@ -1,0 +1,11 @@
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\bin\Debug\net5.0\Hrms.Communication.deps.json
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\bin\Debug\net5.0\Hrms.Communication.dll
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\bin\Debug\net5.0\ref\Hrms.Communication.dll
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\bin\Debug\net5.0\Hrms.Communication.pdb
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.AssemblyInfoInputs.cache
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.AssemblyInfo.cs
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.csproj.CoreCompileInputs.cache
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.dll
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\ref\Hrms.Communication.dll
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.pdb

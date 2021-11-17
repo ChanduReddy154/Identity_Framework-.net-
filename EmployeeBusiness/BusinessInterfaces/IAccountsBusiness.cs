@@ -1,0 +1,24 @@
+﻿using Hrms.Repository.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ViewModels;
+
+namespace Hrms.Business.BusinessInterfaces
+{
+    public interface IAccountsBusiness
+    {
+
+        Task<string> Register(UserViewModel model);
+
+        Task<Dictionary<int, string>> Login(LoginViewModel model);
+
+        Task<Dictionary<int, string>> SendOtp(string mobile);
+
+        Task<string> VeriftOTP(VerifyViewModel model);
+
+        Task<AppUser> GetUserDetails(string userDetail);
+    }
+}
