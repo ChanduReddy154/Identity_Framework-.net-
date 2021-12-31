@@ -1,0 +1,39 @@
+﻿@model ViewModels.UserViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Register</h1>
+
+<form action="Register" , method="post">
+    <div class="form-group">
+        <label for="UserName"> Username</label>
+        @* <input type="text" name="DeptId" class="form-control" placeholder="DepartmentId" />*@
+          <input asp-for="UserName" class="form-control" placeholder="Username" /> 
+    </div>
+    <div class="form-group">
+        <label for="Email"> Email</label>-->
+   @* <input type="text" name="EmpId" class="form-control" placeholder="EmployeeId" /> *@
+    <input asp-for="Email" class="form-control" placeholder="Email" />
+    </div>
+    <div class="form-group">
+        <label for="PhoneNumber"> Phone Number </label>
+        @* <input type="text" name="EmpName" class="form-control" placeholder="Employee Name" />*@
+        <input asp-for="PhoneNumber" class="form-control" placeholder="Phonenumber" />
+    </div>
+    <div class="form-group">
+        <label for="Password"> Password </label>
+        @*  <input type="text" name="EmpSalary" class="form-control" placeholder="Employee Salary" />*@
+        <input asp-for="Password" class="form-control" placeholder="Password" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Register" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

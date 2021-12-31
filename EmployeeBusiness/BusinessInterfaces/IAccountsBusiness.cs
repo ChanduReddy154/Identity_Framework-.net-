@@ -13,6 +13,8 @@ namespace Hrms.Business.BusinessInterfaces
 
         Task<string> Register(UserViewModel model);
 
+       // Task<UserViewModel> RegisterUser(UserViewModel model);
+
         Task<Dictionary<int, string>> Login(LoginViewModel model);
 
         Task<Dictionary<int, string>> SendOtp(string mobile);

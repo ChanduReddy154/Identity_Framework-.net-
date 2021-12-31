@@ -11,6 +11,8 @@ namespace Hrms.Repository.RepositoryInterfaces
     {
         Task<string> Register(AppUser user, string Password, string Role);
 
+   //     Task<AspNetUser> RegisterUser(AppUser user, string Password, string Role);
+
         Task<AppUser> GetByEmail(string Email);
 
         Task<AppUser> GetByUserName(string UserName);

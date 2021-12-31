@@ -430,6 +430,8 @@ D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\scopedcss\bundle\Hrm
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.TagHelpers.input.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.TagHelpers.output.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.RazorCoreGenerate.cache
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Razor\Views\Accounts\Register.cshtml.g.cs
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Razor\Views\Employee\Create.cshtml.g.cs
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Razor\Views\Employee\Index.cshtml.g.cs
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs

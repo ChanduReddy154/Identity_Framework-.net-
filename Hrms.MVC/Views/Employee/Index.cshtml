@@ -1,61 +1,36 @@
 ﻿@model IEnumerable<ViewModels.EmployeeViewModel>
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
+<h1>Employees List</h1>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<h3 style="color:green"> @TempData["status"]</h3>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.EmpId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmpName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmpSalary)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DeptId)
-            </th>
-            <th></th>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Employee Salary</th>
+            <th>Department Id</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmpId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmpName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmpSalary)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeptId)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @{
+            foreach (var emp in Model)
+            {
+                <tr>
+                    <td>@emp.EmpId</td>
+                    <td>@emp.EmpName</td>
+                    <td>@emp.EmpSalary</td>
+                    <td>@emp.DeptId</td>
+
+                </tr>
+            }
+        }
+
     </tbody>
 </table>
-</body>
-</html>

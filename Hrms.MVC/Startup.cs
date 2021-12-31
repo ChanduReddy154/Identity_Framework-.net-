@@ -5,6 +5,7 @@ using Hrms.Repository.Models;
 using Hrms.Repository.RepositoryInterfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,8 +32,26 @@ namespace Hrms.MVC
         {
             string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
             services.AddDbContext<HrmsDBContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<MyContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<HrmsIdentityContext>(options => options.UseSqlServer(connectionString));
+            services.AddIdentity<AppUser, IdentityRole>()
+               .AddEntityFrameworkStores<HrmsIdentityContext>()
+               .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(opt =>
+            {
+                opt.User.RequireUniqueEmail = true;
+                opt.Lockout.AllowedForNewUsers = true;
+                opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+                opt.Lockout.MaxFailedAccessAttempts = 3;
+
+            });
             services.AddTransient<IEmployeeBusiness, EmployeeBusiness>();
             services.AddTransient<IEmployeeRepository, EmployeeRepostitory>();
+            services.AddTransient<IDepartmentBusiness, DepartmentBusiness>();
+            services.AddTransient<IDepartmentRepository, DepartmentRepository>();
+            services.AddTransient<IAccountsBusiness, AccountsBusiness>();
+            services.AddTransient<IAccountsRepository, AccountsRepository>();
             services.AddControllersWithViews();
             services.AddAutoMapper(typeof(AutoMapperConfig));
         }
@@ -58,7 +77,7 @@ namespace Hrms.MVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Employee}/{action=Index}/{id?}");
             });
         }
     }

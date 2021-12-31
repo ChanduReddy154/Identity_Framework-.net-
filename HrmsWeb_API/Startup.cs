@@ -133,8 +133,9 @@ namespace HrmsWeb_API
 
             app.UseRouting();
 
-            app.UseAuthorization();
             app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseCors(op => op.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); 
 
             app.UseEndpoints(endpoints =>

@@ -72,6 +72,8 @@ namespace Hrms.Repository.Implementations
             }
         }
 
+        
+
         public async Task<string> SendOtp(AppUser user)
         {
             return await _userManager.GenerateUserTokenAsync(user, "Phone", "Login");
