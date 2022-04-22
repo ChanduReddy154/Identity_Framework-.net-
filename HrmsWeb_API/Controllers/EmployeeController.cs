@@ -1,4 +1,7 @@
 ﻿using Hrms.Business.BusinessInterfaces;
+using HRMS.Communication.Email;
+using HRMS.Utilities;
+using HrmsWeb_API.EmailSend;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,15 +15,18 @@ namespace HrmsWeb_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class EmployeeController : ControllerBase
     {
 
         private readonly IEmployeeBusiness _empBusiness;
+        // private readonly IEmailSender _emailSender;
+        private readonly IMailService _mailService;
 
-        public EmployeeController(IEmployeeBusiness empBusiness)
+        public EmployeeController(IEmployeeBusiness empBusiness, IMailService mailService)
         {
             _empBusiness = empBusiness;
+            _mailService = mailService;
         }
 
         [HttpGet]
@@ -77,6 +83,36 @@ namespace HrmsWeb_API.Controllers
 
             var result = await _empBusiness.getEmpNames();
             return Ok(result);
+        }
+
+        [HttpPut("UpdateEmployee")]
+        public async Task<IActionResult> updateEmployee(EmployeeViewModel emp)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var result = await _empBusiness.updateEmployee(emp);
+            return Ok(result);
+        }
+
+        [HttpPost("SendEmail")]
+        public async Task<IActionResult> SendEmail([FromForm]MailRequest mail)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            try
+            {
+                await _mailService.SendEmailAsync(mail);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            } 
         }
     }
 }

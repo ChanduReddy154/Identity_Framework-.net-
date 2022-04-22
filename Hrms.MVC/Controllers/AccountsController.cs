@@ -23,7 +23,7 @@ namespace Hrms.MVC.Controllers
         
         public async  Task<IActionResult> Register(UserViewModel model)
         {
-            if(ModelState.IsValid)
+            if(!ModelState.IsValid)
             {
                 return BadRequest(model);
             }

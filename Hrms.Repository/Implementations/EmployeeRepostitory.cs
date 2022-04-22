@@ -19,6 +19,13 @@ namespace Hrms.Repository.Implementations
             _myContext = myContext;
         }
 
+        public async Task<Employee> DeleteEmployee(Employee emp)
+        {
+            var result =  _myContext.Employees.Remove(emp);
+            _myContext.SaveChanges();
+            return result.Entity;
+        }
+
         public async Task <IList<Employee>> getAllEmployees()
         {
 
@@ -51,5 +58,14 @@ namespace Hrms.Repository.Implementations
             return result.Entity;
             throw new NotImplementedException();
         }
+
+        public async Task<Employee> UpdateEmployee(Employee emp)
+        {
+            var result = _myContext.Employees.Update(emp);
+             _myContext.SaveChanges();
+            return result.Entity;
+        }
+
+
     }
 }

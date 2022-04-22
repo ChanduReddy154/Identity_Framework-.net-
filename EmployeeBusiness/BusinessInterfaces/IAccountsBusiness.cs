@@ -21,6 +21,10 @@ namespace Hrms.Business.BusinessInterfaces
 
         Task<string> VeriftOTP(VerifyViewModel model);
 
+        Task<string> GetRolesByUser(AppUser user);
+
         Task<AppUser> GetUserDetails(string userDetail);
+
+        Task<string> generateUserToken(AppUser user);
     }
 }

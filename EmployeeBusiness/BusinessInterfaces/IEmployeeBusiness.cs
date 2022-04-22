@@ -18,6 +18,10 @@ namespace Hrms.Business.BusinessInterfaces
         Task<IList<EmpDetailsViewModel>> getEmpDetails(int? DeptId);
 
         Task<IList<EmpNameViewModel>> getEmpNames();
-        
+
+        Task<EmployeeViewModel> updateEmployee(EmployeeViewModel emp);
+
+       Task<EmployeeViewModel> deleteEmployee(EmployeeViewModel emp);
+
     }
 }

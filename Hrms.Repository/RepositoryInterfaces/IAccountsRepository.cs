@@ -25,6 +25,15 @@ namespace Hrms.Repository.RepositoryInterfaces
 
         Task<bool> VerifyOTP(AppUser user, string OTP);
 
+        Task<string> GetRolesByUser(AppUser user);
+
+        Task<string> generateUserTokenEmail(AppUser user);
+
+        Task<string> generateUserTokenPhone(AppUser user);
+
+        Task<IList<AspNetRole>> GetRoles(AppUser user);
+
+       // Task<string> AssignRoles(AppUser user);
 
 
     }

@@ -19,5 +19,9 @@ namespace Hrms.Repository.RepositoryInterfaces
         Task<IList<EmpDept>> getEmpDetails(int? DeptId);
 
         Task<IList<EmpNames>> getEmpNames();
+
+        Task<Employee> UpdateEmployee(Employee emp);
+
+        Task<Employee> DeleteEmployee(Employee emp);
     }
 }

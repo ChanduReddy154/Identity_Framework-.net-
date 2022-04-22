@@ -14,7 +14,7 @@ namespace HRMS.API.Auth
         private readonly JwtTokenConfig _jwtTokenConfig;
         private readonly byte[] _secret;
 
-        public JwtTokenManager(JwtTokenConfig jwtTokenConfig)
+        public JwtTokenManager(JwtTokenConfig jwtTokenConfig)   
         {
             _key = jwtTokenConfig.Secret;
             _jwtTokenConfig = jwtTokenConfig;
@@ -32,11 +32,22 @@ namespace HRMS.API.Auth
                     new Claim(JwtRegisteredClaimNames.Actort, user.PhoneNumber),
                     new Claim("role", role),
                     new Claim("id", user.Id),
+                    new Claim("Email",user.Email),
+                    
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tokenKey), SecurityAlgorithms.HmacSha256),
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
+            var refreshToken = new RefreshToken()
+            {
+                JwtId = token.Id,
+                IsRevoked = false,
+                UserId = user.Id,
+                DateAdded = DateTime.UtcNow,
+                DateExpire = DateTime.UtcNow.AddMonths(6)
+            };
+          
             return Task.FromResult(tokenHandler.WriteToken(token));
         }
 

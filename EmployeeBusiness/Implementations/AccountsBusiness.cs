@@ -19,6 +19,18 @@ namespace Hrms.Business.Implementations
             _accountsRepository = accountsRepository;
         }
 
+        public Task<string> generateUserToken(AppUser user)
+        {
+            var result = _accountsRepository.generateUserTokenEmail(user);
+            return result;
+        }
+
+        public async Task<string> GetRolesByUser(AppUser user)
+        {
+            string role = await _accountsRepository.GetRolesByUser(user);
+            return role;
+        }
+
         public async Task<AppUser> GetUserDetails(string userDetail)
         {
             AppUser user = null;
@@ -32,7 +44,7 @@ namespace Hrms.Business.Implementations
                 user = await _accountsRepository.GetByPhoneNumber(userDetail);
             }
             return user;
-            throw new NotImplementedException();
+            
         }
 
         public async Task<Dictionary<int, string>> Login(LoginViewModel model)
@@ -73,8 +85,9 @@ namespace Hrms.Business.Implementations
                 PhoneNumber = model.PhoneNumber
             
             };
+            
 
-            var result = await _accountsRepository.Register(user, model.Password, "admin");
+            var result = await _accountsRepository.Register(user, model.Password, "User");
             return result;
         }
 

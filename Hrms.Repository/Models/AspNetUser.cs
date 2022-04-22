@@ -9,10 +9,13 @@ namespace Hrms.Repository.Models
     {
         public AspNetUser()
         {
+            AddressInfos = new HashSet<AddressInfo>();
             AspNetUserClaims = new HashSet<AspNetUserClaim>();
             AspNetUserLogins = new HashSet<AspNetUserLogin>();
             AspNetUserRoles = new HashSet<AspNetUserRole>();
             AspNetUserTokens = new HashSet<AspNetUserToken>();
+            PersonalInformations = new HashSet<PersonalInformation>();
+            RefreshTokens = new HashSet<RefreshToken>();
         }
 
         public string Id { get; set; }
@@ -31,9 +34,12 @@ namespace Hrms.Repository.Models
         public bool LockoutEnabled { get; set; }
         public int AccessFailedCount { get; set; }
 
+        public virtual ICollection<AddressInfo> AddressInfos { get; set; }
         public virtual ICollection<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual ICollection<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual ICollection<AspNetUserRole> AspNetUserRoles { get; set; }
         public virtual ICollection<AspNetUserToken> AspNetUserTokens { get; set; }
+        public virtual ICollection<PersonalInformation> PersonalInformations { get; set; }
+        public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
     }
 }

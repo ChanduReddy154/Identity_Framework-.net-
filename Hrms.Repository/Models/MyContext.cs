@@ -22,11 +22,17 @@ namespace Hrms.Repository.Models
         public virtual DbSet<EmpDept> EmployeeDetails { get; set; }
 
         public virtual DbSet<EmpNames> EmployeeNames { get; set; }
+
+        public virtual DbSet<UserAddress> AddressUsers { get; set; }
+
+        public virtual DbSet<CurrentUser> CurrentUserName { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<EmpDept>().HasNoKey();
             modelBuilder.Entity<EmpNames>().HasNoKey();
+            modelBuilder.Entity<UserAddress>().HasNoKey();
+            modelBuilder.Entity<CurrentUser>().HasNoKey();
         }
     }
 }

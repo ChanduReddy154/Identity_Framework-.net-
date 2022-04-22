@@ -1,7 +1,9 @@
 ﻿using Hrms.Business.BusinessInterfaces;
 using Hrms.Repository.Models;
 using HRMS.API.Auth;
+using HRMS.Communication.Email;
 using HRMS.Utilities;
+using HrmsWeb_API.ActionFilters;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,15 +16,18 @@ namespace HrmsWeb_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [CustomFilterAttribute]
     public class AccountsController : ControllerBase
     {
         private readonly IAccountsBusiness _accountsBusiness;
         private readonly IJwtTokenManager _jwtTokenManager;
+       // private readonly IEmailSender _emailSender;
 
-        public AccountsController(IAccountsBusiness accountsBusiness, IJwtTokenManager jwtTokenManager)
+        public AccountsController(IAccountsBusiness accountsBusiness, IJwtTokenManager jwtTokenManager) //, IEmailSender emailSender
         {
             _accountsBusiness = accountsBusiness;
             _jwtTokenManager = jwtTokenManager;
+           // _emailSender = emailSender;
         }
 
         [HttpPost("Register")]
@@ -32,14 +37,15 @@ namespace HrmsWeb_API.Controllers
             {
                 return BadRequest(new ApiResponse(400, "Validation Errors", ModelState));
             }
+          //  var result = await _accountsBusiness.
             var result = await _accountsBusiness.Register(model);
             return Ok(new ApiResponse(200, result));
 
         }
 
+        
         [HttpPost("Login")]
-
-        public async Task<IActionResult> LoginUser(LoginViewModel model)
+            public async Task<IActionResult> LoginUser(LoginViewModel model)
         {
             if(!ModelState.IsValid)
             {
@@ -54,7 +60,8 @@ namespace HrmsWeb_API.Controllers
             else if(result.Keys.FirstOrDefault() == 2)
             {
                 AppUser user = await _accountsBusiness.GetUserDetails(model.UserName);
-                var token = await _jwtTokenManager.GenerateToken(user, "admin");
+                string role = await _accountsBusiness.GetRolesByUser(user);
+                var token = await _jwtTokenManager.GenerateToken(user, role);
                 return Ok(new ApiResponse(200,"Login Success", token) );
             }
             else 
@@ -93,6 +100,18 @@ namespace HrmsWeb_API.Controllers
             return Ok(new ApiResponse(200, result));
 
         }
+
+        //[HttpPost("ForgotPassword")]
+        //public async Task<IActionResult> forgotPassword([FromBody] ForgotPasswordViewModel forgotPassword)
+        //{
+        //    var user = await _accountsBusiness.GetUserDetails(forgotPassword.Email);
+        //    if (user == null)
+        //    {
+        //        return NotFound(new ApiResponse(204, "The Email is not registered", null));
+        //    }
+        //    var token = await _accountsBusiness.generateUserToken(user);
+        //    var emailMsg = await _emailSender.SendEmailAsync(token);
+        //}
 
     }
 }

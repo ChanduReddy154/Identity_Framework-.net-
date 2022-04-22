@@ -9,8 +9,8 @@ namespace Hrms.Repository.Models
     {
         public int EmpId { get; set; }
         public string EmpName { get; set; }
-        public decimal EmpSalary { get; set; }
         public int DeptId { get; set; }
+        public decimal EmpSalary { get; set; }
 
         public virtual Department Dept { get; set; }
     }

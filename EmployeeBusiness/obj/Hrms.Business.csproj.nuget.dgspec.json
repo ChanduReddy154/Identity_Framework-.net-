@@ -10,16 +10,12 @@
         "projectUniqueName": "D:\\Projects\\.Net\\HrmsWeb_Solution\\EmployeeBusiness\\Hrms.Business.csproj",
         "projectName": "Hrms.Business",
         "projectPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\EmployeeBusiness\\Hrms.Business.csproj",
-        "packagesPath": "C:\\Users\\Chandu Reddy\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\EmployeeBusiness\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Chandu Reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -71,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -81,16 +77,12 @@
         "projectUniqueName": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Communication\\Hrms.Communication.csproj",
         "projectName": "Hrms.Communication",
         "projectPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Communication\\Hrms.Communication.csproj",
-        "packagesPath": "C:\\Users\\Chandu Reddy\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Communication\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Chandu Reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -114,6 +106,24 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.15, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -129,7 +139,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -139,16 +149,12 @@
         "projectUniqueName": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Repository\\Hrms.Repository.csproj",
         "projectName": "Hrms.Repository",
         "projectPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Repository\\Hrms.Repository.csproj",
-        "packagesPath": "C:\\Users\\Chandu Reddy\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Repository\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Chandu Reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -211,7 +217,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -221,16 +227,12 @@
         "projectUniqueName": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
         "projectPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Utilities\\Utilities.csproj",
-        "packagesPath": "C:\\Users\\Chandu Reddy\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Chandu Reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -269,6 +271,10 @@
             "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [
@@ -286,7 +292,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -296,16 +302,12 @@
         "projectUniqueName": "D:\\Projects\\.Net\\HrmsWeb_Solution\\ViewModels\\ViewModels.csproj",
         "projectName": "ViewModels",
         "projectPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\ViewModels\\ViewModels.csproj",
-        "packagesPath": "C:\\Users\\Chandu Reddy\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
         "outputPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\ViewModels\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Chandu Reddy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -348,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

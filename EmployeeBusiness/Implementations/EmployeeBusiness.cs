@@ -22,6 +22,11 @@ namespace Hrms.Business.Implementations
             _mapper = mapper;
         }
 
+        public Task<EmployeeViewModel> deleteEmployee(EmployeeViewModel emp)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task <IList<EmployeeViewModel>> getAllEmployees()
         {
             var employees = await _empRepository.getAllEmployees();
@@ -70,6 +75,12 @@ namespace Hrms.Business.Implementations
             var result = await _empRepository.postEmployee(_mapper.Map<Employee>(emp));
            return _mapper.Map<EmployeeViewModel>(result);
            // throw new NotImplementedException();
+        }
+
+        public async Task<EmployeeViewModel> updateEmployee(EmployeeViewModel emp)
+        {
+            var result = await _empRepository.UpdateEmployee(_mapper.Map<Employee>(emp));
+            return _mapper.Map<EmployeeViewModel>(result);
         }
     }
 }

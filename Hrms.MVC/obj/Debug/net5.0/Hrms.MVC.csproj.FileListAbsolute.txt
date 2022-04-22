@@ -424,9 +424,8 @@ D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.MvcApplicat
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.MvcApplicationPartsAssemblyInfo.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.RazorAssemblyInfo.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.RazorAssemblyInfo.cs
-D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\staticwebassets\Hrms.MVC.StaticWebAssets.Manifest.cache
-D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\staticwebassets\Hrms.MVC.StaticWebAssets.xml
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\scopedcss\bundle\Hrms.MVC.styles.css
+D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\staticwebassets\Hrms.MVC.StaticWebAssets.Manifest.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.TagHelpers.input.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.TagHelpers.output.cache
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.MVC\obj\Debug\net5.0\Hrms.MVC.RazorCoreGenerate.cache
