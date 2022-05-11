@@ -25,6 +25,9 @@ namespace Hrms.Repository.Models
 
         public virtual DbSet<UserAddress> AddressUsers { get; set; }
 
+        public virtual DbSet<OrderDetails> OrderDetails { get; set; }
+
+
         public virtual DbSet<CurrentUser> CurrentUserName { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +36,7 @@ namespace Hrms.Repository.Models
             modelBuilder.Entity<EmpNames>().HasNoKey();
             modelBuilder.Entity<UserAddress>().HasNoKey();
             modelBuilder.Entity<CurrentUser>().HasNoKey();
+            modelBuilder.Entity<OrderDetails>().HasNoKey();
         }
     }
 }

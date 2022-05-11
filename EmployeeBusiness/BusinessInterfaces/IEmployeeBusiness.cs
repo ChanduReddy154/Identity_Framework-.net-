@@ -23,5 +23,7 @@ namespace Hrms.Business.BusinessInterfaces
 
        Task<EmployeeViewModel> deleteEmployee(EmployeeViewModel emp);
 
+        Task<IList<EmployeeViewModel>> countOfEmployees();
+
     }
 }

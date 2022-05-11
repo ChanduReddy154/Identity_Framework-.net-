@@ -29,6 +29,9 @@ namespace Utilities
             CreateMap<ProfileInformation, ProfileViewModel>().ReverseMap();
             CreateMap<PersonalInformation, PersonalInfoViewModel>().ReverseMap();
             CreateMap<CurrentUser, CurrentUserViewModel>().ReverseMap();
+            CreateMap<Item, ItemsViewModel>().ReverseMap();
+            CreateMap<Order, OrdersViewModel>().ReverseMap();
+            CreateMap<OrderDetails, OrderDetailsViewModel>().ReverseMap();
         }
     }
 }

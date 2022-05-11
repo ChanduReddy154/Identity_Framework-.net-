@@ -10,3 +10,15 @@ D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Commu
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.dll
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\ref\Hrms.Communication.dll
 D:\Projects\.Net\HrmsWeb_Solution\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.pdb
+D:\Chandu\Projects\HRMS\Hrms.Communication\bin\Debug\net5.0\Hrms.Communication.deps.json
+D:\Chandu\Projects\HRMS\Hrms.Communication\bin\Debug\net5.0\Hrms.Communication.dll
+D:\Chandu\Projects\HRMS\Hrms.Communication\bin\Debug\net5.0\ref\Hrms.Communication.dll
+D:\Chandu\Projects\HRMS\Hrms.Communication\bin\Debug\net5.0\Hrms.Communication.pdb
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.csproj.AssemblyReference.cache
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.GeneratedMSBuildEditorConfig.editorconfig
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.AssemblyInfoInputs.cache
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.AssemblyInfo.cs
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.csproj.CoreCompileInputs.cache
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.dll
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\ref\Hrms.Communication.dll
+D:\Chandu\Projects\HRMS\Hrms.Communication\obj\Debug\net5.0\Hrms.Communication.pdb

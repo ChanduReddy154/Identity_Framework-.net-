@@ -22,6 +22,12 @@ namespace Hrms.Business.Implementations
             _mapper = mapper;
         }
 
+        public async Task<IList<EmployeeViewModel>> countOfEmployees()
+        {
+            var result = await _empRepository.countOfEmployees();
+            return _mapper.Map<IList<EmployeeViewModel>>(result);
+        }
+
         public Task<EmployeeViewModel> deleteEmployee(EmployeeViewModel emp)
         {
             throw new NotImplementedException();

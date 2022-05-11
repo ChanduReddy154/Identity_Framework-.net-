@@ -29,6 +29,8 @@ namespace Hrms.Repository.Models
         public virtual DbSet<Country> Countrys { get; set; }
         public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<PersonalInformation> PersonalInformations { get; set; }
         public virtual DbSet<Pincode> Pincodes { get; set; }
         public virtual DbSet<ProfileInformation> ProfileInformations { get; set; }
@@ -40,7 +42,7 @@ namespace Hrms.Repository.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-0B249U3;Database=HrmsDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-ER6EMOG;Database=HrmsDB;Trusted_Connection=True;");
             }
         }
 
@@ -245,6 +247,43 @@ namespace Hrms.Repository.Models
                     .HasForeignKey(d => d.DeptId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Employee__DeptId__4CA06362");
+            });
+
+            modelBuilder.Entity<Item>(entity =>
+            {
+                entity.Property(e => e.ItemId)
+                    .HasMaxLength(450)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ItemCost).HasColumnType("money");
+
+                entity.Property(e => e.ItemName).HasMaxLength(50);
+            });
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.Property(e => e.InsertedOn).HasColumnType("datetime");
+
+                entity.Property(e => e.ItemId)
+                    .IsRequired()
+                    .HasMaxLength(450)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasMaxLength(450);
+
+                entity.HasOne(d => d.Item)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.ItemId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Orders__ItemId__17F790F9");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Orders__UserId__17036CC0");
             });
 
             modelBuilder.Entity<PersonalInformation>(entity =>

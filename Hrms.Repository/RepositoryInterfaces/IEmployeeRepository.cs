@@ -23,5 +23,7 @@ namespace Hrms.Repository.RepositoryInterfaces
         Task<Employee> UpdateEmployee(Employee emp);
 
         Task<Employee> DeleteEmployee(Employee emp);
+
+        Task<IList<Employee>> countOfEmployees();
     }
 }

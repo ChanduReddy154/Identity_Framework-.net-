@@ -19,6 +19,13 @@ namespace Hrms.Repository.Implementations
             _myContext = myContext;
         }
 
+        public async Task<IList<Employee>> countOfEmployees()
+        {
+            var result = await _myContext.Employees.FromSqlRaw("exec usp_CountEmployees").ToListAsync();
+            return  result;
+
+        }
+
         public async Task<Employee> DeleteEmployee(Employee emp)
         {
             var result =  _myContext.Employees.Remove(emp);

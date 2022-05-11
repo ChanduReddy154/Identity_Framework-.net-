@@ -96,6 +96,17 @@ namespace HrmsWeb_API.Controllers
             return Ok(result);
         }
 
+        [HttpGet("CountOfEmployee")]
+        public async Task<IActionResult> countOfEmployee()
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var result = await _empBusiness.countOfEmployees();
+            return Ok(result);
+        }
+
         [HttpPost("SendEmail")]
         public async Task<IActionResult> SendEmail([FromForm]MailRequest mail)
         {

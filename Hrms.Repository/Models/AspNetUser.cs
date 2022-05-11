@@ -14,6 +14,7 @@ namespace Hrms.Repository.Models
             AspNetUserLogins = new HashSet<AspNetUserLogin>();
             AspNetUserRoles = new HashSet<AspNetUserRole>();
             AspNetUserTokens = new HashSet<AspNetUserToken>();
+            Orders = new HashSet<Order>();
             PersonalInformations = new HashSet<PersonalInformation>();
             RefreshTokens = new HashSet<RefreshToken>();
         }
@@ -39,6 +40,7 @@ namespace Hrms.Repository.Models
         public virtual ICollection<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual ICollection<AspNetUserRole> AspNetUserRoles { get; set; }
         public virtual ICollection<AspNetUserToken> AspNetUserTokens { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<PersonalInformation> PersonalInformations { get; set; }
         public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
     }

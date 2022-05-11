@@ -467,19 +467,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chand\\.nuget\\packages\\": {}
+    "C:\\Users\\Ayukth\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Communication\\Hrms.Communication.csproj",
+      "projectUniqueName": "D:\\Chandu\\Projects\\HRMS\\Hrms.Communication\\Hrms.Communication.csproj",
       "projectName": "Hrms.Communication",
-      "projectPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Communication\\Hrms.Communication.csproj",
-      "packagesPath": "C:\\Users\\chand\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\.Net\\HrmsWeb_Solution\\Hrms.Communication\\obj\\",
+      "projectPath": "D:\\Chandu\\Projects\\HRMS\\Hrms.Communication\\Hrms.Communication.csproj",
+      "packagesPath": "C:\\Users\\Ayukth\\.nuget\\packages\\",
+      "outputPath": "D:\\Chandu\\Projects\\HRMS\\Hrms.Communication\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\chand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ayukth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -537,7 +542,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

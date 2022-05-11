@@ -98,6 +98,8 @@ namespace HrmsWeb_API
             services.AddTransient<ISendSMSNotification, SendSMSNotification>();
             services.AddTransient<IPersonalInfoInterface, PersonalInfoBusiness>();
             services.AddTransient<IPersonalRepoInterface, PersonalInfoRepository>();
+            services.AddTransient<IOrderInterface, OrderBusiness>();
+            services.AddTransient<IOrderRepoInterface, IOrderRepository>();
 
 
             //JWT Configuration
